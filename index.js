@@ -15,7 +15,7 @@ app.get('/', (req, res, next) => {
                 <h1>Welcome to this Simple Express.js Node Server</h1>
             </body>
         </html>
-    `)
-})
+    `);
+});
 
 app.listen(port);
