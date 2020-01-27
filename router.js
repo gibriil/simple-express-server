@@ -1,8 +1,16 @@
-const express = require('express');
-const router = express.Router();
-const TEST_ROUTE = require('./routes/test.route.js');
+import express from 'express';
+import {
+    router as TEST_ROUTE
+} from './routes/test.route.js';
+import {
+    router as ADMIN_ROUTE
+} from './routes/admin.route.js';
+
+export const router = express.Router();
 
 router.use('/test', TEST_ROUTE);
+
+router.use('/admin', ADMIN_ROUTE);
 
 router.use('/api', (req, res, next) => {
     res.jsonp({
@@ -25,5 +33,3 @@ router.get('/', (req, res, next) => {
         </html>
     `);
 });
-
-module.exports = router;

@@ -1,5 +1,7 @@
-const express = require('express');
-const router = require('./router.js');
+import express from 'express';
+import {
+    router
+} from './router.js';
 
 const PORT = 5000;
 
